@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting to YouTube...</title>
+    <meta http-equiv="refresh" content="0;url=https://www.youtube.com/watch?v=AhZTWs2aq-U">
+    <script>
+      // Try to force open in YouTube app
+      window.onload = function() {
+        var videoUrl = "https://www.youtube.com/watch?v=AhZTWs2aq-U";
+        var appUrl = "youtube://www.youtube.com/watch?v=AhZTWs2aq-U";
+        
+        // Try to open the app
+        window.location.href = appUrl;
+
+        // Fallback to browser if app doesn't open
+        setTimeout(function() {
+          window.location.href = videoUrl;
+        }, 1500);
+      };
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to YouTube... If the app doesn't open, <a href="https://youtu.be/AhZTWs2aq-U">click here</a>.</p>
+  </body>
+</html>
